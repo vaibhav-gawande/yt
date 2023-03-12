@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<input type ="text" id ="myText" 
+placeholder ="Enter Embed Link Here" value ="">
+
+<button type ="button" onclick ="myFunction()">
+View Video </button>
+
+<p id ="demo"> </p>
+
+<script>
+
+function myFunction() {
+var link = document.getElementById("myText").value;
+document.getElementById("demo").innerHTML = link;
+}
+
+</script>
+</body>
+</html>
