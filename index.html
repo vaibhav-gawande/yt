@@ -1,21 +1,32 @@
+<!DOCTYPE html>
 <html>
+<head>
+<title>YT</title>
+<link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<form>
-<input type ="text" id ="myText" 
-placeholder ="Enter Embed Link Here" value ="">
 
-<button type ="button" onclick ="myFunction()">
-View Video </button>
-<input type="reset" name ="Clear">
-<p id ="demo"> </p>
+<form id="myForm">  <input type="text" id="myText" placeholder="Enter Embed Link Here" value="">
+  <div>
+    <button type="button" onclick="myFunction()">View Video</button>
+    <input type="reset" name="Clear" onclick="clearr()">
+  </div>
+  <p id="demo"></p>
 </form>
-<script>
 
+<script>
 function myFunction() {
-var link = document.getElementById("myText").value;
-document.getElementById("demo").innerHTML = link;
+  var link = document.getElementById("myText").value;
+  document.getElementById("demo").innerHTML = link;
 }
 
+function clearr() {
+  document.getElementById("demo").innerHTML = "";
+}
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  myFunction();
+});
 </script>
 </body>
 </html>
